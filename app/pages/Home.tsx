@@ -1,6 +1,13 @@
 import React from 'react';
 const {dialog} = require('electron').remote;
+const d2gsi = require('dota2-gsi');
+
 var fs = require('fs');
+
+console.log('before')
+console.log("d2gsi");
+//console.log(d2gsi);
+//console.log(d2gsi ())
 
 
 const playSound = (path: string) => {
@@ -21,7 +28,8 @@ const playSound = (path: string) => {
 
 export default function Home() {
     const click = () => {
-        playSound('track_01.mp3')
+        const  server = new d2gsi();
+        //playSound('track_01.mp3')
         /*
          var options = {
           title: "Save file",
